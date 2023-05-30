@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="rest.css">
+  <title>Zamówienie obiadu</title>
+  
+   
+</head>
+<body>
+
+
+<div style="text-align: center">
+  <h1>Menu</h1>
+      
+<div>
+
+ <select>
+        <option>-----</option>
+        <option>Zupa pomidorowa</option>
+        <option>Zupa krem z dyni</option>
+        <option>Zupa grzybowa</option>
+        <option>Zupa Ogórkowa</option>
+      </select>
+
+  <select>
+        <option>-----</option>
+        <option>Kurczak w sosie śmietanowym z ryżem</option>
+        <option>Spaghetti carbonara</option>
+        <option>Mielony z buraczkami</option>
+        <option>Schabowy z ziemniakami i surówką</option>
+      </select>
+
+ <select>
+        <option>-----</option>
+        <option>Rogalik</option>
+        <option>Obważanek</option>
+        <option>Pączek</option>
+        <option>Ciastko Czekoladowe</option>
+      </select>
+
+ <select>
+        <option>-----</option>
+        <option>Coca Cola</option>
+        <option>Kawa Czarna</option>
+        <option>Lipton</option>
+        <option>Red Bull</option>
+      </select>
+<div/>
+<br>
+<br>
+<div style="font-family: arial;font-size:30px; text-align: center">
+   Cennik;
+    
+</div> 
+                                                          
+<li>Zupa pomidorowa  15zł</li>       <li>Kurczak w sosie śmietanowym z ryżem 22zł         <li>Rogalik 12zł                      <li>Coca Cola 9zł
+<li>Zupa krem z dyni 14zł            <li>Spaghetti carbonara 19zł                         <li>Obważanek 9zł                     <li>Kawa Czarna 14zł
+<li>Zupa grzybowa  16zł              <li>Mielony z buraczkami 21zł                        <li>Pączek 7zł                        <li>Lipton 8zł
+<li>Zupa Ogórkowa  12zł              <li>Schabowy z ziemniakami i surówką 29zł            <li>Ciastko Czekoladowe 17zł          <li>Red Bull 12zł
+  <h1>Zamówienie</h1>
+  <form action="process_order.php" method="post">
+    <label for="imie">Imię:</label>
+    <input type="text" id="imie" name="imie" required><br>
+
+    <label for="nazwisko">Nazwisko:</label>
+    <input type="text" id="nazwisko" name="nazwisko" required><br>
+
+    <label for="telefon">Numer telefonu:</label>
+    <input type="tel" id="telefon" name="telefon" required><br>
+
+    <label for="miasto">Miasto:</label>
+    <input type="text" id="miasto" name="miasto" required><br>
+
+    <label for="ulica">Ulica:</label>
+    <input type="text" id="ulica" name="ulica" required><br>
+
+    <label for="dom_mieszkanie">Dom/Mieszkanie:</label>
+    <input type="text" id="dom_mieszkanie" name="dom_mieszkanie" required><br>    </select>
+Zniżka 10% przy zamówieniu minumum 4 rzeczy
+<label class="checkbox" for="Zniżka 10% przy zamówieniu minumum 4 rzeczy">
+ <input type="checkbox" name="s" id="Zniżka 10% przy zamówieniu minumum 4 rzeczy">
+</label>
+<br>
+<br>
+<br>
+<br>
+ <script>
+    function obliczVAT() {
+      var Suma Za jedzenie = parseFloat(document.getElementById("Suma Za jedzenie").value);
+      var stawkaVAT = parseFloat(document.getElementById("stawka-vat").value);
+      
+      var wartoscVAT = Suma Za jedzenie * (stawkaVAT / 100);
+      var sumaBrutto = Suma Za jedzenie + wartoscVAT;
+      
+      document.getElementById("wartosc-vat").value = wartoscVAT.toFixed(2);
+      document.getElementById("suma-brutto").value = sumaBrutto.toFixed(2);
+    }
+<br>
+
+  </script>
+ <label for="Suma Za jedzenie">Wartość obiadu :</label>
+  <input type="number" id="Suma Za jedzenie">
+  
+  <label for="stawka-vat">Stawka VAT (%):</label>
+  <input type="number" id="stawka-vat">
+  
+  <button onclick="obliczVAT()">Oblicz</button>
+  
+  <label for="suma-brutto">Suma :</label>
+  <input type="text" id="suma-brutto" readonly>
+
+<br>
+<br>
+<div>
+<script language="JavaScript">
+function WinOpen(x)
+{
+window.open(x,"tak","toolbar=no,directories=no,menubar=no,height=1000,width=1000,top=1000,left=1000");
+}
+function kod(x)
+{
+window.open(x,"tak","toolbar=no,directories=no,menubar=no,height=1000,width=1000,top=1000,left=1000");
+}
+</script>
+<form>
+<input type="button" style="background-color:green;color:White" value="Złóż Zamówienie" onclick="WinOpen('Zamowienie.html')">
+</form>
+</div>
+<br>
+<br>
+</html>
