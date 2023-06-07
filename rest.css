@@ -1,5 +1,8 @@
-body {
 
-    font-family: Courier New;
- background: #F5FF19;
+body {
+background-image: url('resta.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+  font-family: Courier New;
 }
